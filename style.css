@@ -24,7 +24,7 @@
 	}
 	/* ***; caratteristiche uniche: */
 		.parallax_A1 {
-		  background-image: url("https://drive.google.com/file/d/18CI2jRgkEw6-nKfmy0hqZO-X7YgaleyB/view?usp=drivesdk"); /* immagine di sfondo */
+		  background-image: url("Immagini/Parallax00_Wallpaper.jpg"); /* immagine di sfondo */
 		  height: 100vh; /* altezza = schermo intero */
 		  border-top-left-radius: 12px;      /* Angoli curvi */
 		  border-top-right-radius: 12px;
@@ -402,3 +402,4 @@
 	  }
 
 	}
+
