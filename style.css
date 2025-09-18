@@ -1,0 +1,403 @@
+/* Reset base dello stile dell'intera pagina*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/* PARALLAX: definizione delle sezioni con sfondo con effetto parallasse*/
+
+
+	/* Sfondi parallasse grandi; caratteristiche comuni: */
+	.parallax_A1, .parallax_A2, .parallax_A3 {
+		background-attachment: fixed; /* TRUCCO per il parallax */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		z-index: 1;            /* sopra il menu */
+		/*overflow: hidden;         /* Nasconde ciò che sborda */
+		/*margin: 0px;             /* Spazio attorno (opzionale) */
+	}
+	/* ***; caratteristiche uniche: */
+		.parallax_A1 {
+		  background-image: url("Immagini/Parallax00_Wallpaper.jpg"); /* immagine di sfondo */
+		  height: 100vh; /* altezza = schermo intero */
+		  border-top-left-radius: 12px;      /* Angoli curvi */
+		  border-top-right-radius: 12px;
+		}
+		.parallax_A2 {
+		  background-image: url("Immagini/Parallax0_Wallpaper.jpg"); /* immagine di sfondo */
+		  height: 65vh; /* altezza = schermo intero */
+		  border-bottom-left-radius: 12px;      /* Angoli curvi */
+		  border-bottom-right-radius: 12px;
+		}
+		.parallax_A3 {
+		  background-image: url("Immagini/Parallax0_Wallpaper.jpg"); /* immagine di sfondo */
+		  height: 65vh; /* altezza = schermo intero */
+		  border-radius: 12px;      /* Angoli curvi */
+		}
+
+
+	/* Sfondi parallasse piccoli; caratteristiche comuni: */
+	.parallax_B1, .parallax_B2, .parallax_B3 {
+		height: 40vh; /* altezza = schermo intero */
+		background-attachment: fixed; /* TRUCCO per il parallax */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 12px;      /* Angoli curvi */
+	}
+	/* ***; caratteristiche uniche: */
+		.parallax_B1 {
+		  background-image: url("Immagini/Parallax1.jpg"); /* immagine di sfondo */
+		}
+		.parallax_B2 {
+		  background-image: url("Immagini/Parallax2.jpg"); /* immagine di sfondo */
+		}
+		.parallax_B3 {
+		  background-image: url("Immagini/Parallax3.jpg"); /* immagine di sfondo */
+		}
+
+
+	/* Testo dentro agli sfondi parallasse; caratteristiche comuni: */
+	.parallax-text_A1, .parallax-text_A2 {
+		display: flex;
+		flex-direction: column;       /* Titolo sopra, sottotitolo sotto */
+		justify-content: center;      /* Verticalmente al centro */
+		align-items: center;          /* Orizzontalmente al centro */
+		text-align: center;
+		color: white;                 /* Colore testo */
+		text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* Ombra per leggibilità */
+		position: relative;
+		height: 85%;		/* Definisce il distacco dall'inizio del div */
+	}
+	/* *****; caratteristiche uniche: */
+	.parallax-text_A1 h1 {
+		font-size: 6rem;              /* Titolo grande */
+	}
+	.parallax-text_A1 p {
+		font-size: 3.5rem;
+	}
+	.parallax-text_A2 h1 {
+		font-size: 3rem;              /* Titolo grande */
+	}
+	.parallax-text_A2 p {
+		font-size: 1.5rem;
+	}
+
+
+
+
+/* BODY: definizione caratteristiche principali della pagina*/
+
+	/* Body */
+	body {
+	  font-family: Old Standard TT;
+	  line-height: 1;		/* Interlinea per avere meno spazio tra le righe di testo */
+	  color: #333;
+	  padding: 0 20px;
+	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ccircle cx='5' cy='5' r='1.8' fill='black'/%3E%3C/svg%3E");
+	  background-color: #bfbfbf;		/* Colore di sfondo */
+	  background-attachment: fixed;		/* Mantiene fisso lo sfondo */
+	  overflow-x: hidden;		/* rimuove la barra orizzontale */
+	}
+
+
+
+
+/* HEADER: definizione caratteristiche dell'header */
+
+	
+	/* caratteristiche generali: */
+	header {
+	  background-color: #000;
+	  color: #fff;
+	  text-align: center;
+	  padding: 30px 10px;
+	  border-bottom-left-radius: 12px; /* raggio scelto per angoli arrotondati */
+	  border-bottom-right-radius: 12px;
+	  position: sticky; /* fa in modo che l'header rimanga in sovraimpressione anche se la pagina scorre */
+	  top: 0;
+	  z-index: 2; /* pone l'header davanti agli altri elementi */
+	}
+	/* caratteristiche elementi specifici: */
+	header p {
+	  font-size: 1.1em;
+	  margin-top: 8px;
+	  opacity: 0.9;
+	}
+	header img {		/* posiziona correttamente il logo nell'header */
+	  position: absolute;
+	  left: 20px; /* margine sinistro per l’immagine */
+	  top: 50%;
+	  transform: translateY(-50%);
+	  height: 100px; /* esempio */
+	}
+
+
+	 /* MOBILE: */
+	@media (max-width: 1080px) {
+	  header {
+		position: static; /* l’header scorre */
+		padding: 15px;
+	  }
+	  header img {
+		position: static;
+		transform: none;
+		margin-bottom: 10px; /* spazio tra logo e testo sottostante */
+		height: 50px; /* logo più piccolo su mobile */
+	  }
+	  header div {
+		width: auto;
+	  }
+	}
+
+
+
+
+/* MAIN: definizione caratteristiche del main e di elementi inclusi */
+
+
+	/* caratteristiche generali: */
+	main {
+	  max-width: 950px;
+	  margin: 40px auto;
+	}
+	/* caratteristiche elementi specifici: */
+	section {
+	  background: #f4f4f4;
+	  padding: 20px;
+	  margin-top: 20px;
+	  border-radius: 12px;
+	  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	}
+	section:hover {		/* effetto di ingrandimento delle section */
+		transition: transform 0.8s ease;	/* Transizione per l'ingrandimento */
+		transform: scale(1.02);		/* Effetto zoom */
+	}
+	section:not(:hover){	/* effetto di de-ingrandimento delle section */
+		transition: transform 0.8s ease; /* Transizione per il rimpicciolimento */
+		transform: scale(1.00); /* Effetto zoom */
+	}
+	section:active {	/* effetto di de-ingrandimento al clic delle section */
+		  transform: scale(1.25);
+		}
+	section h2, section h3 {
+	  margin-bottom: 12px;		/* spazio tra il testo nelle section*/
+	}
+
+
+	 /* Bottoni per download reports: */
+	.button {
+	  display: inline-block;
+	  background-color: #000;
+	  color: #fff;
+	  text-decoration: none;
+	  padding: 12px 20px;
+	  border-radius: 8px;
+	  transition: background-color 0.3s ease;
+	}
+
+
+	 /* Angoli smussati menu evidenziato: applico a tutti gli <a> tranne quello con class="no-style" dell'header */
+	a {
+		 display: inline-block;
+		 color: #333;
+		 text-decoration: none;
+		 padding: 12px 20px;
+		 border-radius: 12px;
+		 transition: background-color 0.3s ease;		/* VERIFICARE utilità dato che c'è anche sopra per .button*/
+	}
+	a:hover {
+	  background-color: #999;
+	}
+	 /* Sovrascrivo solo quello con la classe "no-style"*/
+	a.no-style {
+	  display: inline;
+	  padding: 0px 0px;
+	}
+
+
+
+
+/* ALTRE CARATTERISTICHE DELLA PAGINA: */
+
+
+	/* fissati angoli arrotondati per tutte le immagini nella pagina: */
+	img {
+		border-radius: 12px;
+	}
+
+	.parallax_A2::after {		/* nasconde parzialmente il menu con lo scorrimento su mobile*/		/* OTTIMIZZARE */
+	  content: "";
+	  position: absolute;
+	  top:0; left:0; right:0; bottom:0;
+	  transform: translateZ(-1px) scale(1.5);
+	  background: url('tuo-sfondo.jpg') center/cover no-repeat;
+	  z-index: -1;
+	}
+
+	/* proprietà in comune tra i div nelle section */
+	.report-row, .report-row2 {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  gap: 20px;
+	}
+
+
+
+
+/* FOOTER: definizione caratteristiche del footer e di elementi inclusi */
+
+	/* caratteristiche generali: */
+	footer {
+	  text-align: center;
+	  font-size: 0.9em;
+	  color: #555;
+	  padding: 20px;
+	  margin-top: 20px;
+	  border-top: 1px solid #ddd;
+	  background-color: #f9f9f9;
+	  border-top-left-radius: 12px;
+	  border-top-right-radius: 12px;
+	}
+	/* caratteristiche elementi specifici: */
+	footer div {         /* RESPONSIVE: per allineare meglio gli elementi del footer su mobile */
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  gap: 10px;
+	  display: flex;
+	  justify-content: space-between;
+	}
+	
+	
+	
+	
+/* MENU LATERALE: definizione caratteristiche della sidebar a sx */
+
+
+	/* caratteristiche generali: */
+	.sidebar {
+		width: 240px;
+		background-color: #444;
+		color: white;
+		position: fixed;
+		top: 150px;
+		padding-top: 20px;
+		overflow-y: auto;		/* rimuove eventuale barra di navigazione */
+		border-radius: 12px; /* Angoli arrotondati */
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra per distacco visivo */
+		z-index: 0;
+		left: 30px;
+	}
+	 /* caratteristiche elementi specifici: */
+	.sidebar a {
+		display: block;
+		color: white;
+		padding: 12px;
+		text-decoration: none;
+		transition: background 0.3s;
+	}
+	.sidebar a:hover {
+		background-color: #777;
+	}
+	.dropdown {		/* Menu con sottomenu */
+		position: relative;
+	}
+	.dropdown-content {
+		max-height: 0;
+		overflow: hidden;
+		background-color: #555;
+		transition: max-height 0.8s ease;
+	}
+	.dropdown:hover .dropdown-content {
+		max-height: 300px;		/* Spazio sufficiente per il contenuto */
+	}
+	.dropdown-content a {
+		padding-left: 20px;
+		font-size: 0.9em;
+	}
+
+
+
+
+/* MOBILE: maggiore adattamento responsive su schermi più o meno stretti */
+
+
+	/* RESPONSIVE: smartphone */
+	@media (max-width: 730px) {
+	  .report-row {
+		flex-direction: column-reverse; /* immagine sopra al testo */
+		text-align: center; /* opzionale: centrare tutto */
+	  }
+		/* semplicemente in colonna, perchè è già reverse nell'html */
+	  .report-row2 {
+		flex-direction: column; /* immagine sopra al testo */
+		text-align: center; /* opzionale: centrare tutto */
+	  }
+
+	  .report-row img, .report-row2 img {
+		max-width: 50%;  /* immagine fluida */
+		height: auto;
+	  }
+	}
+	 /* RESPONSIVE: tablet */
+	@media (max-width: 1478px) {
+	  .sidebar {
+		position: sticky;  /* si blocca in alto durante lo scroll */
+		top: 0;            /* attaccata in alto */
+		width: 100%;       /* prende tutta la larghezza */
+		margin: 0 auto 20px auto; /* un po' di spazio sotto */
+		left: 0;           /* reset a sinistra */
+		border-radius: 0 0 12px 12px;  /* rettangolare su mobile, opzionale */
+		z-index: 1; /* sovrappone alle section */
+	  }
+	  main {
+		margin: 0 auto; /* togli margine laterale per dare spazio */
+		width: 100%;
+	  }
+	  header {
+		border-radius: 0 0 0 0;
+	  }
+	  .parallax_A2 {
+		 border-bottom-left-radius: 0px;
+		 border-bottom-right-radius: 0px;
+	  }
+	  .parallax_A1 {
+		 border-top-left-radius: 0px;
+		 border-top-right-radius: 0px;
+	  }
+	  .parallax_A3 {
+		  margin-top: 20px; /* distanza dal div precedente */
+	  }
+	  .parallax-text_A1 h1 {
+	  font-size: 3rem;              /* Titolo grande */
+	  margin: 0;
+	  }
+	  .parallax-text_A1 p {
+	  font-size: 1.5rem;
+	  margin-top: 0px;
+	  margin-left: 15px;
+	  margin-right: 15px;
+	  }
+	  .parallax-text_A2 h1 {
+	  font-size: 2rem;              /* Titolo grande */
+	  margin: 0;
+	  margin-top: 50px;
+	  }
+	  .parallax-text_A2 p {
+	  font-size: 1.2rem;
+	  margin-top: 0px;
+	  margin-left: 15px;
+	  margin-right: 15px;
+	  }
+	  footer {
+	  font-size: 0.8em;
+	  }
+	}
