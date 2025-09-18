@@ -96,7 +96,7 @@
 
 	/* Body */
 	body {
-	  font-family: Old Standard TT;
+	  font-family: "Old Standard TT";
 	  line-height: 1;		/* Interlinea per avere meno spazio tra le righe di testo */
 	  color: #333;
 	  padding: 0 20px;
@@ -402,4 +402,5 @@
 	  }
 
 	}
+
 
