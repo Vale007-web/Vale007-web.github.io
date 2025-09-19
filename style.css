@@ -365,6 +365,9 @@
 	  header {
 		border-radius: 0 0 0 0;
 	  }
+	  html, body {
+		overflow-x: hidden;		/* evita che si crei spazio verticale a destra degli elementi della pagina */
+	  }
 	  .parallax_A2 {
 		 border-bottom-left-radius: 0px;
 		 border-bottom-right-radius: 0px;
@@ -402,6 +405,7 @@
 	  }
 
 	}
+
 
 
 
