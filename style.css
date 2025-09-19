@@ -368,6 +368,9 @@
 	  html, body {
 		overflow-x: hidden;		/* evita che si crei spazio verticale a destra degli elementi della pagina */
 	  }
+	  .link-solo-desktop {
+		 pointer-events: none;       /* rende il menu dropdown non cliccabile */
+	  }
 	  .parallax_A2 {
 		 border-bottom-left-radius: 0px;
 		 border-bottom-right-radius: 0px;
@@ -405,6 +408,7 @@
 	  }
 
 	}
+
 
 
 
