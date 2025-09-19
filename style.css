@@ -341,7 +341,6 @@
 		flex-direction: column; /* immagine sopra al testo */
 		text-align: center; /* opzionale: centrare tutto */
 	  }
-
 	  .report-row img, .report-row2 img {
 		max-width: 50%;  /* immagine fluida */
 		height: auto;
@@ -408,6 +407,7 @@
 	  }
 
 	}
+
 
 
 
